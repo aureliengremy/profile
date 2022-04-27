@@ -146,3 +146,8 @@ li {
     transform: rotateZ(0);
   }
 }
+
+.icone {
+  font-size: 200px;
+  text-align: center;
+}
