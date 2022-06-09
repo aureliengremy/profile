@@ -1,0 +1,87 @@
+body {
+  color: #a2a2a2;
+  background-color: #ffffff;
+}
+.left {
+  height: 100%;
+  background-image: url(https://images.unsplash.com/photo-1563008887-170b34916b21?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2787&q=80);
+  background-size: cover;
+  backdrop-filter: blur(2px);
+}
+
+.profile {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: end;
+  &-img {
+    margin-left: auto;
+    margin-right: auto;
+    img {
+      border-radius: 50%;
+    }
+  }
+  &-title {
+    color: #fdfdfd;
+    text-align: center;
+  }
+}
+.social {
+  &-icon {
+    display: flex;
+    justify-content: center;
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .profile {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: end;
+    &-img {
+      margin-left: auto;
+      margin-right: initial;
+      img {
+        border-radius: 50%;
+      }
+    }
+    &-title {
+      text-align: right;
+    }
+  }
+  .social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .screen-row {
+    height: 100vh;
+  }
+  .social {
+    align-items: baseline;
+    justify-content: end;
+  }
+  .right {
+    height: 100%;
+    overflow-y: scroll;
+  }
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {}

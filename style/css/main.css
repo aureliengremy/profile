@@ -1,0 +1,56 @@
+body {
+  color: #a2a2a2;
+  background-color: #ffffff; }
+
+.left {
+  height: 100%;
+  background-image: url(https://images.unsplash.com/photo-1563008887-170b34916b21?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2787&q=80);
+  background-size: cover;
+  backdrop-filter: blur(2px); }
+
+.profile {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: end; }
+  .profile-img {
+    margin-left: auto;
+    margin-right: auto; }
+    .profile-img img {
+      border-radius: 50%; }
+  .profile-title {
+    color: #fdfdfd;
+    text-align: center; }
+
+.social-icon {
+  display: flex;
+  justify-content: center; }
+  .social-icon img {
+    width: 40px;
+    height: 40px; }
+
+@media (min-width: 768px) {
+  .profile {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: end; }
+    .profile-img {
+      margin-left: auto;
+      margin-right: initial; }
+      .profile-img img {
+        border-radius: 50%; }
+    .profile-title {
+      text-align: right; }
+  .social {
+    display: flex;
+    align-items: center;
+    justify-content: center; } }
+
+@media (min-width: 992px) {
+  .screen-row {
+    height: 100vh; }
+  .social {
+    align-items: baseline;
+    justify-content: end; }
+  .right {
+    height: 100%;
+    overflow-y: scroll; } }
