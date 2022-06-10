@@ -28,7 +28,25 @@ body {
     width: 40px;
     height: 40px; }
 
-@media (min-width: 768px) {
+.right {
+  color: #a2a2a2; }
+
+.cards {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around; }
+
+.card {
+  width: 120px;
+  height: 80px;
+  transition: transform 0.2s ease;
+  box-shadow: 0 4px 6px 0 #a2a2a2;
+  margin-bottom: 1.5em; }
+
+.card:hover {
+  transform: scale(1.1); }
+
+@media (min-width: 576px) {
   .profile {
     display: flex;
     flex-flow: column wrap;
@@ -36,8 +54,6 @@ body {
     .profile-img {
       margin-left: auto;
       margin-right: initial; }
-      .profile-img img {
-        border-radius: 50%; }
     .profile-title {
       text-align: right; }
   .social {
@@ -45,9 +61,13 @@ body {
     align-items: center;
     justify-content: center; } }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .screen-row {
     height: 100vh; }
+  .left-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
   .social {
     align-items: baseline;
     justify-content: end; }
