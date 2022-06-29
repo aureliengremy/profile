@@ -14,7 +14,7 @@ function App() {
             <div className="row left-inner h-100">
               <div className="profile col-md-12 col-sm-6 col-12 my-3">
                 <div className="profile-img mb-3">
-                  <img src={me} className="" alt="profile" width="150px" height="150px"/>
+                  <img src={me} className="" alt="profile"/>
                 </div>
                 <div className="profile-title">
                   <h1>Je suis <strong>Aurelien Gremy</strong>,</h1>

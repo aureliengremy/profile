@@ -18,12 +18,20 @@ body {
     margin-right: auto;
     img {
       border-radius: 50%;
+      width: 100px;
+      height: 100px;
     }
   }
   &-title {
     color: #fdfdfd;
     text-align: center;
     text-shadow: 0 0 6px #222222;
+  }
+  &-title h1 {
+    font-size: 1.5em;
+  }
+  &-title h2 {
+    font-size: 1.2em;
   }
 }
 .social {
@@ -85,6 +93,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    &-icon {
+      flex-direction: column;
+    }
   }
   .card {
     width: 40%;
@@ -104,6 +115,9 @@ body {
   .social {
     align-items: baseline;
     justify-content: flex-end;
+    &-icon {
+      flex-direction: row;
+    }
   }
   .right {
     height: 100%;
@@ -130,11 +144,34 @@ body {
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-
+  .profile {
+    &-img img {
+        width: 150px;
+        height: 150px;
+    }
+    &-title h1 {
+      font-size: 2em;
+    }
+    &-title h2 {
+      font-size: 1.5em;
+    }
+  }
 }
 
 // X-Large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
+  .profile {
+    &-img img {
+        width: 200px;
+        height: 200px;
+    }
+    &-title h1 {
+      font-size: 2.5em;
+    }
+    &-title h2 {
+      font-size: 2em;
+    }
+  }
 }
 
 // XX-Large devices (larger desktops, 1400px and up)
