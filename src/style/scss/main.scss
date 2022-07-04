@@ -133,12 +133,14 @@ body {
   }
 
   .scroll-container .scroll-section {
-      scroll-snap-align: start;
-      height: 95vh;
+    flex-direction: column;
+    scroll-snap-align: start;
+    height: 95vh;
   }
   .scroll-section h3 {
     margin-bottom: 0;
     margin-top: 2em;
+    height: 10%;
   }
 }
 
