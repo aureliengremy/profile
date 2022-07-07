@@ -7,6 +7,7 @@ const Project = () => {
             <div className="cards">
                 <div className="card">
                     card 1
+                    https://rent-a-life.herokuapp.com/
                 </div>
                 <div className="card">
                     card 2
