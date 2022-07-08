@@ -1,0 +1,148 @@
+/* import font  */
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+/* Global classes */
+.old_centred {
+  text-align: center;
+}
+
+.old_body {
+  /* margin: 0 auto; */
+  background-color: #3A3935;
+  font-family: 'Space Mono', monospace;
+  height: 100vh;
+}
+
+.old_container {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+}
+.old_card {
+  display: block;
+  width: 60%;
+  height: auto;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #1B1B1B;
+  border: 2px solid #040404;
+  border-radius: 5px;
+}
+.old_picture {
+  width: 200px;
+  margin: 20px auto;
+  transition: 3s;
+  border-radius: 50%;
+}
+.old_picture:hover {
+  filter: drop-shadow(1px 1px 25px #901644) hue-rotate(360deg);
+}
+
+.old_title-name, .old_title-job, .old_description {
+  color: #F5F5F5;
+}
+.old_title-name, .old_title-job {
+  text-shadow: 5px 5px #901644;
+}
+.old_description {
+  width: 80%;
+  margin: 0 auto;
+  text-shadow: 2px 2px #74104D;
+  line-height: 1.old_5;
+}
+.old_btn {
+  display: block;
+  width: 120px;
+  padding: 10px 5px;
+  border-radius: 5px;
+  background-image: linear-gradient(to right, #1B1B1B , #040404);
+  border: 2px solid #74104D;
+  margin: 20px auto;
+  color: #F5F5F5;
+  text-decoration: none;
+  transition: 0.old_5s;
+}
+.old_btn:hover {
+  background-image: linear-gradient(to right, #901644 , #74104D);
+  border: 6px solid #660000;
+  color: #040404;
+  padding: 6px 2px;
+}
+.old_social-link {
+  text-decoration: none;
+  color: #F5F5F5;
+  font-size: 32px;
+  transition: 1s
+}
+.old_social-link:hover {
+  color: #74104D
+}
+
+.old_list {
+  list-style: none;
+  padding-left: 0;
+}
+.old_list-item {
+  display: inline-block;
+  margin: 10px;
+}
+
+
+@media (max-width: 960px) {
+  .old_container {
+    width: 700px;
+  }
+  .old_card {
+    width: 70%;
+  }
+}
+
+
+@media (max-width: 720px) {
+  .old_container {
+    width: 600px;
+  }
+  .old_card {
+    width: 80%;
+  }
+}
+
+@media (max-width: 540px) {
+  .old_container {
+    width: 400px;
+  }
+  .old_card {
+    width: 90%;
+  }
+
+}
+
+/* Animation button */
+.old_btn-animated {
+  animation: wiggle 2s linear infinite;
+}
+
+/* Keyframes */
+@keyframes wiggle {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }
+}
