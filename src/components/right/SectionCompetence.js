@@ -19,6 +19,17 @@ const SectionCompetence = () => {
         <div className="scroll-section row section-competence my-3 pt-4">
             <h3>Compétence</h3>
             <Competence iconeSrc={illustrator} />
+            <Competence iconeSrc={photoshop} />
+            <Competence iconeSrc={xd} />
+            <Competence iconeSrc={figma} />
+            <Competence iconeSrc={html} />
+            <Competence iconeSrc={javascript} />
+            <Competence iconeSrc={linux} />
+            <Competence iconeSrc={notion} />
+            <Competence iconeSrc={raspberry} />
+            <Competence iconeSrc={react} />
+            <Competence iconeSrc={ruby} />
+            <Competence iconeSrc={sass} />
         </div>
     )
 }
