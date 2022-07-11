@@ -1,7 +1,7 @@
 import React from 'react'
 import '../../old_version_style.css';
 import old_me from '../../assets/images/old-me-in-the-dark.jpeg'
-import { useNavigate, Link, Outlet } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const OldVersion = () => {
 
