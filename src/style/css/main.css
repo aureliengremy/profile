@@ -67,20 +67,13 @@ body {
 
 @media (min-width: 576px) {
   .profile {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: flex-end; }
-    .profile-img {
-      margin-left: auto;
-      margin-right: initial; }
-    .profile-title {
-      text-align: right; }
+    display: flex; }
   .social {
     display: flex;
     align-items: center;
     justify-content: center; }
     .social-icon {
-      flex-direction: column; }
+      flex-direction: row; }
   .card {
     width: 40%; }
   .scroll-section h3 {
@@ -89,6 +82,11 @@ body {
     height: 10%; } }
 
 @media (min-width: 768px) {
+  .profile-img {
+    margin-left: auto;
+    margin-right: initial; }
+  .profile-title {
+    text-align: right; }
   .screen-row {
     height: 100vh; }
   .left-inner {
@@ -105,14 +103,6 @@ body {
     overflow-y: scroll; }
   .card {
     width: 30%; }
-  .scroll-container {
-    height: 100vh;
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory; }
-  .scroll-container .scroll-section {
-    flex-direction: column;
-    scroll-snap-align: start;
-    height: 95vh; }
   .scroll-section h3 {
     margin-bottom: 0;
     margin-top: 2em;
@@ -125,13 +115,30 @@ body {
   .profile-title h1 {
     font-size: 2em; }
   .profile-title h2 {
-    font-size: 1.5em; } }
+    font-size: 1.5em; }
+  .scroll-container {
+    height: 100vh; }
+  .scroll-container .scroll-section {
+    height: 95vh; } }
 
 @media (min-width: 1200px) {
-  .profile-img img {
-    width: 200px;
-    height: 200px; }
-  .profile-title h1 {
-    font-size: 2.5em; }
-  .profile-title h2 {
-    font-size: 2em; } }
+  .profile {
+    display: flex;
+    justify-content: flex-end; }
+    .profile-img img {
+      width: 200px;
+      height: 200px; }
+    .profile-title h1 {
+      font-size: 2.5em; }
+    .profile-title h2 {
+      font-size: 2em; }
+  .right {
+    height: 100%;
+    overflow-y: scroll; }
+  .scroll-container {
+    height: 100vh;
+    scroll-snap-type: y mandatory; }
+  .scroll-container .scroll-section {
+    flex-direction: row;
+    scroll-snap-align: start;
+    height: 95vh; } }

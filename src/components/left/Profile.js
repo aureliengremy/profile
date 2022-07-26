@@ -3,7 +3,7 @@ import me from '../../assets/images/me-demo-day.png'
 
 const Profile = () => {
     return (
-        <div className="profile col-md-12 col-sm-6 col-12 my-3">
+        <div className="profile col-md-12 col-12 my-3">
             <div className="profile-img mb-3">
                 <img src={me} className="" alt="profile" />
             </div>
