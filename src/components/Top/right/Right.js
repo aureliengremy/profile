@@ -1,8 +1,6 @@
 import React from 'react'
 import SectionDescription from './SectionDescription'
 import SectionCompetence from './SectionCompetence'
-import SectionProject from './SectionProject'
-import SectionForm from './SectionForm'
 
 const Right = () => {
     return (
@@ -10,8 +8,6 @@ const Right = () => {
             <div className="container scroll-container">
                 <SectionDescription />
                 <SectionCompetence />
-                <SectionProject />
-                <SectionForm />
             </div>
         </div>
     )

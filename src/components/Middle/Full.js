@@ -1,8 +1,7 @@
 import React from 'react'
-import SectionDescription from '../right/SectionDescription'
-import SectionCompetence from '../right/SectionCompetence'
-import SectionProject from '../right/SectionProject'
-import SectionForm from '../right/SectionForm'
+import SectionDescription from '../Top/right/SectionDescription'
+import SectionCompetence from '../Top/right/SectionCompetence'
+
 
 const Full = () => {
   return (

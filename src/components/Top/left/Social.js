@@ -1,9 +1,9 @@
 import React from 'react'
-import github from '../../assets/rs-icones/w-icons8-github-60.png'
-import linkedin from '../../assets/rs-icones/w-icons8-linkedin-60.png'
-import twitter from '../../assets/rs-icones/w-icons8-twitter-60.png'
-import codepen from '../../assets/rs-icones/w-icons8-codepen-50.png'
-import dev from '../../assets/rs-icones/w-icons8-dev-64.png'
+import github from '../../../assets/rs-icones/w-icons8-github-60.png'
+import linkedin from '../../../assets/rs-icones/w-icons8-linkedin-60.png'
+import twitter from '../../../assets/rs-icones/w-icons8-twitter-60.png'
+import codepen from '../../../assets/rs-icones/w-icons8-codepen-50.png'
+import dev from '../../../assets/rs-icones/w-icons8-dev-64.png'
 
 const Social = () => {
     return (

@@ -1,8 +1,8 @@
-import Left from "./components/left/Left";
-import Right from "./components/right/Right";
-import OldVersion from './components/old/OldVersion';
 import { Route, Routes } from 'react-router-dom';
-import Full from "./components/full/Full";
+import Top from "./components/Top/Top";
+import OldVersion from './components/old/OldVersion';
+import Middle from "./components/Middle/Middle";
+import Bottom from './components/Bottom/Bottom';
 
 const App = () =>  {
 
@@ -10,16 +10,12 @@ const App = () =>  {
     <Routes>
       <Route index path="/profile" element={
         <div className="container-fluid">
+          <Top/>
           <div className="row screen-row">
-            <Left/>
-            <Right/>
+            <Middle/>
           </div>
           <div className="row screen-row">
-            <Full/>
-          </div>
-          <div className="row screen-row">
-            <Right/>
-            <Left/>
+            <Bottom/>
           </div>
         </div>
       }/>
