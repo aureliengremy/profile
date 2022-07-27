@@ -2,8 +2,10 @@ import Left from "./components/left/Left";
 import Right from "./components/right/Right";
 import OldVersion from './components/old/OldVersion';
 import { Route, Routes } from 'react-router-dom';
+import Full from "./components/full/Full";
 
-function App() {
+const App = () =>  {
+
   return (
     <Routes>
       <Route index path="/profile" element={
@@ -11,6 +13,13 @@ function App() {
           <div className="row screen-row">
             <Left/>
             <Right/>
+          </div>
+          <div className="row screen-row">
+            <Full/>
+          </div>
+          <div className="row screen-row">
+            <Right/>
+            <Left/>
           </div>
         </div>
       }/>
