@@ -2,7 +2,7 @@ import React from 'react'
 
 const Project = () => {
     return (
-        <div className="scroll-section row section-project my-3 pt-4">
+        <div className="row section-project my-3 pt-4">
             <h3>Project</h3>
             <div className="cards">
                 <div className="card">

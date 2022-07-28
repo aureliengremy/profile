@@ -5,12 +5,17 @@ import Middle from "./components/Middle/Middle";
 import Bottom from './components/Bottom/Bottom';
 
 const App = () =>  {
-
+  const handleScroll = event => {
+    console.log('scrollTopAPP: ', event.currentTarget.scrollTop);
+    console.log('offsetHeightAPP: ', event.currentTarget.offsetHeight);
+  };
   return (
     <Routes>
       <Route index path="/profile" element={
-        <div className="container-fluid">
-          <Top/>
+        <div onScroll={handleScroll} className="container-fluid">
+          <div className="row screen-row">
+            <Top/>
+          </div>
           <div className="row screen-row">
             <Middle/>
           </div>

@@ -16,7 +16,7 @@ import Competence from './Competence'
 
 const SectionCompetence = () => {
     return (
-        <div className="scroll-section row section-competence my-3 pt-4">
+        <div className="row section-competence my-3 pt-4">
             <h3>Compétence</h3>
             <Competence iconeSrc={illustrator} />
             <Competence iconeSrc={photoshop} />
