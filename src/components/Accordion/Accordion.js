@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
-import { BiDownArrow, BiUpArrow } from 'react-icons/bi'
+import { RiArrowDownSFill, RiArrowUpSFill } from 'react-icons/ri'
 
 const Accordion = () => {
 
@@ -22,8 +22,8 @@ const Accordion = () => {
                 >
                     Accordion Menu
                     <i>{contentVisible
-                        ? <BiDownArrow />
-                        : <BiUpArrow />}
+                        ? <RiArrowDownSFill size="24px" />
+                        : <RiArrowUpSFill size="24px" />}
                     </i>
                 </button>
             </div>
