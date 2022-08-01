@@ -7,7 +7,11 @@
   border: 1px solid #a2a2a2;
 }
 
-/* style the title button of the accordion menu */
+.accordion button {
+  display: flex;
+  justify-content: space-between;
+}
+
 .accordion_title {
   color: #a2a2a2;
   width: 100%;
