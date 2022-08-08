@@ -3,12 +3,10 @@ import me from '../../../assets/images/me-demo-day.png'
 
 const Profile = () => {
     return (
-        <div className="profile col-md-12 col-12 my-3">
-            <div className="profile-img mb-3">
-                <img src={me} className="" alt="profile" />
-            </div>
-            <div className="profile-title">
-                <h1>Je suis <strong>Aurelien Gremy</strong>,</h1>
+        <div className="profile flex flex-col mx-auto items-center">
+            <img src={me} className="profile-img w-32 rounded-full" alt="profile" />
+            <div className="profile-title text-gray-700 text-xl tracking-wide py-2">
+                <h1>Je suis <span className="font-bold">Aurelien Gremy</span>,</h1>
                 <h2> développeur full-stack</h2>
             </div>
         </div>

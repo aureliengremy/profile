@@ -7,7 +7,7 @@ import dev from '../../../assets/rs-icones/w-icons8-dev-64.png'
 
 const Social = () => {
     return (
-        <div className="social col-md-12 col-12 mb-3">
+        <div className="social">
             <div className="social-icon">
                 <a href="https://github.com/aureliengremy" target="_blank" rel="noopener noreferrer">
                     <img src={github} alt="github-icone" />

@@ -5,13 +5,11 @@ import { NavLink } from 'react-router-dom';
 
 const Left = () => {
     return (
-        <div className="left col-md-4 col-12">
+        <div className="left">
             <NavLink to='/old_version' className="old_version" alt="old-version">📁</NavLink>
-            <div className="container h-100">
-                <div className="row left-inner h-100">
-                    <Profile/>
-                    <Social/>
-                </div>
+            <div className="max-w-md mx-auto py-5">
+                <Profile />
+                <Social />
             </div>
         </div>
     )

@@ -12,14 +12,14 @@ const App = () =>  {
   return (
     <Routes>
       <Route index path="/profile" element={
-        <div onScroll={handleScroll} className="container">
-          <div className="row screen-row">
+        <div onScroll={handleScroll} className="bg-gray-50 text-gray-900">
+          <div className="row-auto">
             <Top/>
           </div>
-          <div className="row screen-row">
+          <div className="row-auto">
             <Middle/>
           </div>
-          <div className="row screen-row">
+          <div className="row-auto">
             <Bottom/>
           </div>
         </div>
