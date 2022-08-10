@@ -1,8 +1,5 @@
 @import url(../../components/old/old_version.scss);
 @import url(../../components/Accordion/accordion.scss);
 .left {
-  height: 100%;
   background-image: url(https://images.unsplash.com/photo-1563008887-170b34916b21?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2787&q=80);
-  background-size: cover;
-  backdrop-filter: blur(2px);
-  position: relative; }
+}

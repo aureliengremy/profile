@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 
 const Left = () => {
     return (
-        <div className="left">
+        <div className="left bg-cover backdrop-blur-sm relative h-full">
             <NavLink to='/old_version' className="old_version" alt="old-version">📁</NavLink>
             <div className="max-w-md mx-auto py-5">
                 <Profile />
