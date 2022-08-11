@@ -6,15 +6,15 @@ import Accordion from '../../Accordion/Accordion'
 const Right = () => {
 
     return (
-        <div className="right col-md-8 col-12">
-            <div className="container scroll-container">
+        <div className="right">
+            <div className="">
                 <SectionDescription />
                 <SectionCompetence />
-                <div className="row">
-                    <div className="col-6">
+                <div className="">
+                    <div className="">
                         <Accordion/>
                     </div>
-                    <div className="col-6">
+                    <div className="">
                         <Accordion/>
                     </div>
 

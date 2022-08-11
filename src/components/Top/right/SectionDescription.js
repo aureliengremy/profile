@@ -2,7 +2,7 @@ import React from 'react'
 
 const Description = () => {
     return (
-        <div className="row section-description mt-2 pt-4">
+        <div className="section-description">
             <h3>Qui suis-je ?</h3>
             <p>Je suis Aurélien Gremy, patient et déterminé, j'ai toujours tout fait pour créer la meilleur des synergie entre ces deux qualités, sportif dans une constante optimisation des mes objectifs, musicien entretenant sa soif de créativité dans une recherche constante de nouveautés.</p>
             <p>Mon parcours atypique m'a permis d'acquérir une certaine expertise et un savoir-faire multidisciplinaire.</p>
