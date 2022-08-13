@@ -7,14 +7,14 @@ const Right = () => {
 
     return (
         <div className="right">
-            <div className="">
-                <SectionDescription />
-                <SectionCompetence />
-                <div className="">
-                    <div className="">
+            <div className="max-w-md mx-auto py-5">
+                <SectionDescription addClass="py-3" />
+                <SectionCompetence addClass="py-3" />
+                <div className="py-3">
+                    <div className="py-2">
                         <Accordion/>
                     </div>
-                    <div className="">
+                    <div className="py-2">
                         <Accordion/>
                     </div>
 

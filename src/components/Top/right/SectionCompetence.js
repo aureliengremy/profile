@@ -14,9 +14,10 @@ import sass from '../../../assets/comp-icones/sass.png'
 import Competence from './Competence'
 
 
-const SectionCompetence = () => {
+const SectionCompetence = ({addClass}) => {
+    console.log(addClass)
     return (
-        <div className="section-competence">
+        <div className={`section-competence ${addClass}`}>
             <h3>Compétence</h3>
             <Competence iconeSrc={illustrator} />
             <Competence iconeSrc={photoshop} />
