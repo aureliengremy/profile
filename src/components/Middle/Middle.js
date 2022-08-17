@@ -3,11 +3,9 @@ import SectionProject from './SectionProject'
 
 const Middle = () => {
   return (
-    <div className="col-md-12 col-12">
-            <div className="container scroll-container">
-                <SectionProject/>
-            </div>
-        </div>
+    <div className="max-w-md sm:max-w-xl md:max-w-2xl lg:max-w-4xl mx-auto py-5">
+      <SectionProject />
+    </div>
   )
 }
 
