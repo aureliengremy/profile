@@ -7,7 +7,8 @@ const Left = () => {
     return (
         <div className="left bg-cover backdrop-blur-sm relative lg:h-full lg:w-1/3">
             <NavLink to='/old_version' className="old_version" alt="old-version">📁</NavLink>
-            <div className="max-w-md mx-auto py-5">
+            <div className="max-w-md mx-auto py-5" style={{marginTop:"50%"}}>
+                {/* scroll change marginTop value */}
                 <Profile />
                 <Social />
             </div>

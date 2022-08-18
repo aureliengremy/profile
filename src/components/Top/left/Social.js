@@ -33,7 +33,7 @@ const Social = () => {
     }
 
     return (
-        <div className="social flex justify-between w-6/12 mx-auto">
+        <div className="social flex justify-between w-6/12 mx-auto lg:justify-start lg:ml-auto lg:mr-0">
             {
                 Object.entries(socialLinks).map(([key, value]) => {
                     return (
