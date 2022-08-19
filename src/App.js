@@ -16,7 +16,7 @@ const App = () =>  {
           <div className="lg:flex lg:h-screen">
             <Top/>
           </div>
-          <div className="row-auto">
+          <div className="lg:flex bg-gray-100">
             <Middle/>
           </div>
           <div className="lg:flex lg:h-screen">

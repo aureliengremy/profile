@@ -4,8 +4,6 @@ import Right from './right/Right'
 
 const Top = () => {
 
-    
-
     return (
         <Fragment>
             <Left marginTopCustom={64}/>
