@@ -3,9 +3,12 @@ import Left from './left/Left'
 import Right from './right/Right'
 
 const Top = () => {
+
+    
+
     return (
         <Fragment>
-            <Left />
+            <Left marginTopCustom={64}/>
             <Right />
         </Fragment>
     )
