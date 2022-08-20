@@ -1,25 +1,26 @@
-import React, { useEffect, useState }  from 'react'
+import React, { useEffect, useState } from 'react'
 import SectionDescription from './SectionDescription'
 import SectionCompetence from './SectionCompetence'
 import Accordion from '../../Accordion/Accordion'
+import { useCallback } from 'react'
 
-const Right = ({getScroll}) => {
+const Right = ({ getScroll }) => {
 
     const [maxScrollHeight, setMaxScrollHeight] = useState('')
     const [scrollTop, setScrollTop] = useState('')
 
-    const handleScroll = event => {
-        setMaxScrollHeight(event.currentTarget.scrollHeight - event.currentTarget.offsetHeight)
-        setScrollTop(event.currentTarget.scrollTop)
-        // console.log('offsetHeight: ', event.currentTarget.offsetHeight);
-        // console.log('scrollHeight: ', event.currentTarget.scrollHeight);
-        // console.log('scrollTop: ', event.currentTarget.scrollTop);
-    };
+    const handleScroll = useCallback(
+        event => {
+            setMaxScrollHeight(event.currentTarget.scrollHeight - event.currentTarget.offsetHeight)
+            setScrollTop(event.currentTarget.scrollTop)
+        },
+        []
+    )
     
     useEffect(() => {
         getScroll(maxScrollHeight, scrollTop)
-
-    }, [scrollTop])
+        // eslint-disable-next-line
+    }, [scrollTop, maxScrollHeight])
 
 
 
@@ -30,10 +31,10 @@ const Right = ({getScroll}) => {
                 <SectionCompetence addClass="py-3" />
                 <div className="py-3 space-y-5">
                     <div className="">
-                        <Accordion/>
+                        <Accordion />
                     </div>
                     <div className="">
-                        <Accordion/>
+                        <Accordion />
                     </div>
 
                 </div>

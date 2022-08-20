@@ -17,7 +17,7 @@ const Top = () => {
         })
         setPourcentageScroll(((rightScroll.scrollTop / rightScroll.maxScrollHeight) * 100)/2)
     }
-    console.log(rightScroll)
+    // console.log(rightScroll)
 
     return (
         <Fragment>

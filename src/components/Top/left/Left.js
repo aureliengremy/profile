@@ -17,7 +17,8 @@ const Left = ({pourcScroll}) => {
             ...leftStyle,
             backgroundPosition: `left -${pourcScroll}px`
         })
-    }, [leftStyle])
+        // eslint-disable-next-line
+    }, [pourcScroll])
    
     return (
         <div className="left backdrop-blur-sm relative lg:h-full lg:w-1/3"
