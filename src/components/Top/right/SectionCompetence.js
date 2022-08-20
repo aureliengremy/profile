@@ -15,7 +15,7 @@ import Competence from './Competence'
 
 
 const SectionCompetence = ({addClass}) => {
-    console.log(addClass)
+   
     return (
         <div className={`section-competence ${addClass}`}>
             <h3>Compétence</h3>

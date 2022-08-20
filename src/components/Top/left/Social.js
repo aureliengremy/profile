@@ -37,7 +37,7 @@ const Social = () => {
             {
                 Object.entries(socialLinks).map(([key, value]) => {
                     return (
-                        <a href={value} target="_blank" rel="noopener noreferrer">
+                        <a key={key} href={value} target="_blank" rel="noopener noreferrer">
                             {socialIcon(key)}
                         </a>
                     )
