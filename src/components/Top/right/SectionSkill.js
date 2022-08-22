@@ -32,33 +32,39 @@ const SectionSkill = ({ addClass }) => {
             <h3>Compétence</h3>
             <CardSkill>
                 <h4>Language</h4>
-                <Skill iconeSrc={html} />
-                <Skill iconeSrc={sass} />
-                <Skill iconeSrc={ruby} />
-                <Skill iconeSrc={javascript} />
-                <Skill iconeSrc={react} />
-                <Skill iconeSrc={git} />
-                <Skill iconeSrc={java} />
-                <Skill iconeSrc={sql} />
-                <Skill iconeSrc={tailwind} />
+                <div className="flex flex-wrap">
+                    <Skill iconeSrc={html} />
+                    <Skill iconeSrc={sass} />
+                    <Skill iconeSrc={ruby} />
+                    <Skill iconeSrc={javascript} />
+                    <Skill iconeSrc={react} />
+                    <Skill iconeSrc={git} />
+                    <Skill iconeSrc={java} />
+                    <Skill iconeSrc={sql} />
+                    <Skill iconeSrc={tailwind} />
+                </div>
             </CardSkill>
             <CardSkill>
                 <h4>Tools</h4>
-                <Skill iconeSrc={linux} />
-                <Skill iconeSrc={notion} />
-                <Skill iconeSrc={raspberry} />
-                <Skill iconeSrc={github} />
-                <Skill iconeSrc={gitlab} />
-                <Skill iconeSrc={heroku} />
-                <Skill iconeSrc={intellij} />
-                <Skill iconeSrc={vscode} />
+                <div className="flex flex-wrap">
+                    <Skill iconeSrc={linux} />
+                    <Skill iconeSrc={notion} />
+                    <Skill iconeSrc={raspberry} />
+                    <Skill iconeSrc={github} />
+                    <Skill iconeSrc={gitlab} />
+                    <Skill iconeSrc={heroku} />
+                    <Skill iconeSrc={intellij} />
+                    <Skill iconeSrc={vscode} />
+                </div>
             </CardSkill>
             <CardSkill>
                 <h4>Design</h4>
-                <Skill iconeSrc={illustrator} />
-                <Skill iconeSrc={photoshop} />
-                <Skill iconeSrc={xd} />
-                <Skill iconeSrc={figma} />
+                <div className="flex flex-wrap">
+                    <Skill iconeSrc={illustrator} />
+                    <Skill iconeSrc={photoshop} />
+                    <Skill iconeSrc={xd} />
+                    <Skill iconeSrc={figma} />
+                </div>
             </CardSkill>
 
 

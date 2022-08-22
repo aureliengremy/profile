@@ -14,8 +14,8 @@ const SectionResume = ({ addClass }) => {
     // -> send the list to SectionSkill to highlight icone
 
     return (
-        <Fragment>
-            <div className={addClass}>
+        <div className="flex">
+            <div className="py-3 space-y-5 lg:w-2/3">
                 <div className="">
                     <h3>Expérience professionnels</h3>
                     <Accordion />
@@ -25,8 +25,9 @@ const SectionResume = ({ addClass }) => {
                     <Accordion />
                 </div>
             </div>
-            <SectionSkill addClass="py-3" />
-        </Fragment>
+            <SectionSkill addClass="py-3 lg:w-1/3" />
+        </div>
+
     )
 }
 
