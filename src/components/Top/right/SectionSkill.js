@@ -11,28 +11,28 @@ import raspberry from '../../../assets/comp-icones/raspberry.png'
 import react from '../../../assets/comp-icones/react.png'
 import ruby from '../../../assets/comp-icones/ruby.png'
 import sass from '../../../assets/comp-icones/sass.png'
-import Competence from './Competence'
+import Skill from './Skill'
 
 
-const SectionCompetence = ({addClass}) => {
+const SectionSkill = ({addClass}) => {
    
     return (
-        <div className={`section-competence ${addClass}`}>
+        <div className={`section-Skill ${addClass}`}>
             <h3>Compétence</h3>
-            <Competence iconeSrc={illustrator} />
-            <Competence iconeSrc={photoshop} />
-            <Competence iconeSrc={xd} />
-            <Competence iconeSrc={figma} />
-            <Competence iconeSrc={html} />
-            <Competence iconeSrc={javascript} />
-            <Competence iconeSrc={linux} />
-            <Competence iconeSrc={notion} />
-            <Competence iconeSrc={raspberry} />
-            <Competence iconeSrc={react} />
-            <Competence iconeSrc={ruby} />
-            <Competence iconeSrc={sass} />
+            <Skill iconeSrc={illustrator} />
+            <Skill iconeSrc={photoshop} />
+            <Skill iconeSrc={xd} />
+            <Skill iconeSrc={figma} />
+            <Skill iconeSrc={html} />
+            <Skill iconeSrc={javascript} />
+            <Skill iconeSrc={linux} />
+            <Skill iconeSrc={notion} />
+            <Skill iconeSrc={raspberry} />
+            <Skill iconeSrc={react} />
+            <Skill iconeSrc={ruby} />
+            <Skill iconeSrc={sass} />
         </div>
     )
 }
 
-export default SectionCompetence
+export default SectionSkill

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Competence = ({iconeSrc, iconeName}) => {
+const Skill = ({iconeSrc, iconeName}) => {
   return (
     <div>
         <img src={iconeSrc} alt={iconeName} width='50px' height='50px' />
@@ -8,4 +8,4 @@ const Competence = ({iconeSrc, iconeName}) => {
   )
 }
 
-export default Competence
+export default Skill
