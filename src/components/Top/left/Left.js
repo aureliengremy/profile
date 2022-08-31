@@ -7,7 +7,7 @@ import { useState } from 'react';
 const Left = ({pourcScroll}) => {
 
     const [leftStyle, setLeftStyle] = useState({
-        backgroundSize: "160%",
+        backgroundSize: "70vh",
         transitionProperty: "background-position",
         transitionDuration: "3s",
         backgroundPosition: "left 0px"
