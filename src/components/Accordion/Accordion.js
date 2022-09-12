@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react';
 import { RiArrowDownSFill, RiArrowUpSFill } from 'react-icons/ri'
 
-const Accordion = ({title, content, contentTitle, date}) => {
+const Accordion = ({title, content, contentTitle, date, skill, handleAccorClick}) => {
 
     const [contentVisible, setContentVisible] = useState(false)
 
@@ -11,8 +11,9 @@ const Accordion = ({title, content, contentTitle, date}) => {
     }
     // console.log(contentVisible)
 
+
     return (
-        <div className="accordion_container mb-5 py-2">
+        <div className="accordion_container mt-5 py-2" onClick={() => handleAccorClick(skill)}>
             <div className="accordion">
 
                 <button
