@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react';
 import { RiArrowDownSFill, RiArrowUpSFill } from 'react-icons/ri'
 
-const Accordion = ({title, content, contentTitle, date, skill, handleAccorClick}) => {
+const Accordion = ({ title, content, contentTitle, date, skill, handleAccorClick }) => {
 
     const [contentVisible, setContentVisible] = useState(false)
 
@@ -39,7 +39,16 @@ const Accordion = ({title, content, contentTitle, date, skill, handleAccorClick}
             >
                 <div className="accordion_content-inner flex flex-col">
                     <h3 className="pb-2">{contentTitle}</h3>
+                   
+                    {/* {content.length > 1 ? 
+                        content.forEach(text => {
+                            <p>- {text}</p>
+                        })
+                        :
+                        <p>{content}</p>
+                    } */}
                     <p>{content}</p>
+
                 </div>
             </div>
         </div>
