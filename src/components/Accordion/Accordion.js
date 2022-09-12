@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react';
 import { RiArrowDownSFill, RiArrowUpSFill } from 'react-icons/ri'
 
-const Accordion = () => {
+const Accordion = ({title, content, contentTitle, date}) => {
 
     const [contentVisible, setContentVisible] = useState(false)
 
@@ -12,7 +12,7 @@ const Accordion = () => {
     // console.log(contentVisible)
 
     return (
-        <div className="accordion_container">
+        <div className="accordion_container mb-5 py-2">
             <div className="accordion">
 
                 <button
@@ -20,11 +20,15 @@ const Accordion = () => {
                     className="accordion_title"
                     onClick={() => toggleContentVisible()}
                 >
-                    Accordion Menu
-                    <i>{contentVisible
-                        ? <RiArrowDownSFill size="24px" />
-                        : <RiArrowUpSFill size="24px" />}
-                    </i>
+                    <h2 className="font-bold">{title}</h2>
+                    <div className="flex items-center">
+                        <span className="">{date}</span>
+                        <i className="p-2">{contentVisible
+                            ? <RiArrowDownSFill size="24px" />
+                            : <RiArrowUpSFill size="24px" />}
+                        </i>
+
+                    </div>
                 </button>
             </div>
 
@@ -32,10 +36,9 @@ const Accordion = () => {
                 className={`accordion_content ${contentVisible ? "show_content" : ""
                     }`}
             >
-                <div className="accordion_content-inner">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Deleniti hic natus dolore quas sunt earum commodi sit voluptates expedita suscipit,
-                        quod, quaerat unde incidunt harum rem provident est laudantium temporibus.</p>
+                <div className="accordion_content-inner flex flex-col">
+                    <h3 className="pb-2">{contentTitle}</h3>
+                    <p>{content}</p>
                 </div>
             </div>
         </div>

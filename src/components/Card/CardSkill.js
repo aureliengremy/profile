@@ -1,8 +1,8 @@
 import React from 'react'
 
-const CardSkill = ({text, link, children}) => {
+const CardSkill = ({text, link, children, addClass}) => {
   return (
-    <div className="flex flex-col items-center rounded-lg bg-white shadow-lg overflow-hidden">
+    <div className={`flex flex-col items-center rounded-lg bg-white shadow-lg overflow-hidden ${addClass}`}>
     {/* <img className="h32 w-32 flex-shrink-0" src={destination.imageUrl} alt={destination.imageAlt} />
     <div className="px-6 py-4">
         <h3 className="text-lg font-semibold text-gray-800">{destination.city}</h3>

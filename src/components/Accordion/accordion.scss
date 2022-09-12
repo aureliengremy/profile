@@ -4,7 +4,6 @@
   border-radius: 5px;
   overflow: hidden;
   border: 1px solid #a2a2a2;
-  margin: auto;
 }
 
 .accordion button {
@@ -23,9 +22,7 @@
   justify-content: left;
   align-items: center;
   padding-left: 10px;
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
+  padding-right: 10px;
 }
 
 .accordion_content {
@@ -47,5 +44,4 @@
   padding: 10px;
   display: flex;
   justify-content: left;
-  align-items: center;
 }

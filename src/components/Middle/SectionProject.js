@@ -2,6 +2,10 @@ import React from 'react'
 import Card from '../Card/Card'
 
 const Project = () => {
+    const el = document.getElementsByClassName("section-project")
+    if (el) {
+        // el.getBoundingClientRect().top
+    }
     return (
         <div className="section-project mx-auto py-8">
             <h3 className="text-xl text-gray-900">Project</h3>
