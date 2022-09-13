@@ -6,8 +6,7 @@ import SectionSkill from './SectionSkill'
 const SectionResume = ({ addClass }) => {
 
     const [selectSkills, setSelectSkills] = useState([])
-    const [accordSta, setAccordSta] = useState(false)
-    const emptyArray = []
+    const [accordSta, setAccordSta] = useState(true)
 
     // integrate list exp.pro and formation
     // -> create accordion with title and description (skills used)
@@ -24,7 +23,7 @@ const SectionResume = ({ addClass }) => {
             date: "2020 / 2022",
             contentTitle: "INTÉGRATEUR / DEV FRONT-END",
             content: "Développement front-end, production de site-web personnalisé, gestion des environnements et déploiement de plateformes en ligne, soutien et amélioration des projets web.",
-            skill: ['html', 'css', 'js']
+            skill: ['html', 'sass', 'javascript']
         },
         {
             id:2,
@@ -32,7 +31,7 @@ const SectionResume = ({ addClass }) => {
             date: "2017 / 2020",
             contentTitle: "DEV FRONT-END",
             content: "Développement front-end, gestion des environnements et déploiement de plateformes e-commerce.",
-            skill: ['html', 'css', 'js', 'java']
+            skill: ['html', 'sass', 'javascript', 'java']
         },
         {
             id:3,
@@ -61,19 +60,23 @@ const SectionResume = ({ addClass }) => {
             skill: ['ai', 'ps']
         }
     ]
-
     const handleAccorClick = (skill) => {   
         // console.log(skill);
+        console.log(accordSta)
         if(accordSta){
+            console.log('je suis dedans')
             setSelectSkills(skill)
-        } 
+        } else {
+            setSelectSkills('')
+        }
         // console.log(accordSta);
     }
-
+    
     const handleOpen = (accordState) => {
         setAccordSta(!accordState)
         
     }
+    
 
     return (
         <div className="">

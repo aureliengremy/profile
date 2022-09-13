@@ -11,7 +11,6 @@ const Accordion = ({ title, content, contentTitle, date, skill, handleAccorClick
         handleOpen(!contentVisible)
     }
 
-
     return (
         <div className="accordion_container mt-5 py-2" onClick={() => handleAccorClick(skill)}>
             <div className="accordion">

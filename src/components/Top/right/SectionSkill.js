@@ -23,12 +23,77 @@ import tailwind from '../../../assets/comp-icones/tailwind-css.png'
 import vscode from '../../../assets/comp-icones/vscode.png'
 import CardSkill from '../../Card/CardSkill'
 import Skill from './Skill'
-import { useState } from 'react'
+import { useEffect } from 'react'
 
 
-const SectionSkill = ({ addClass, sendSkills}) => {
+const SectionSkill = ({ addClass, sendSkills }) => {
 
-    console.log(sendSkills);
+    // console.log(sendSkills);
+
+    const langage = [
+        {
+            icone: html,
+            name: 'html'
+        },
+        {
+            icone: sass,
+            name: 'sass'
+        },
+        {
+            icone: ruby,
+            name: 'ruby'
+        },
+        {
+            icone: javascript,
+            name: 'javascript'
+        },
+        {
+            icone: react,
+            name: 'react'
+        },
+        {
+            icone: git,
+            name: 'git'
+        },
+        {
+            icone: java,
+            name: 'java'
+        },
+        {
+            icone: sql,
+            name: 'sql'
+        },
+        {
+            icone: tailwind,
+            name: 'tailwind'
+        }
+    ]
+
+
+    useEffect(() => {
+        console.log(sendSkills);
+        if (sendSkills.length > 0) {
+            sendSkills.forEach(element => {
+                // console.log(element);
+                let divSkill = document.getElementById(element)
+                divSkill.classList.remove('p-1')
+                divSkill.classList.add('border-skill')
+            })
+        } else {
+            let divWithClass = document.getElementsByClassName('border-skill')
+            Array.from(divWithClass).forEach((el) => {
+                el.classList.remove('border-skill')
+                el.classList.add('p-1')
+            });
+            
+            console.log('off');
+        }
+    }, [sendSkills])
+
+
+
+
+
     return (
         <div className={`section-skill ${addClass}`}>
             <h3 className="font-bold text-gray-800 text-lg pb-2">Compétence</h3>
@@ -36,15 +101,9 @@ const SectionSkill = ({ addClass, sendSkills}) => {
                 <CardSkill addClass="m-3">
                     <h4 className="font-bold text-gray-800 text-lg p-4 pb-2">Language</h4>
                     <div className="flex flex-wrap justify-center p-2 gap-2">
-                        <Skill iconeSrc={html} />
-                        <Skill iconeSrc={sass} />
-                        <Skill iconeSrc={ruby} />
-                        <Skill iconeSrc={javascript} />
-                        <Skill iconeSrc={react} />
-                        <Skill iconeSrc={git} />
-                        <Skill iconeSrc={java} />
-                        <Skill iconeSrc={sql} />
-                        <Skill iconeSrc={tailwind} />
+                        {langage.map((item, index) => (
+                            <Skill key={index} iconeSrc={item.icone} id={item.name} />
+                        ))}
                     </div>
                 </CardSkill>
                 <CardSkill addClass="m-3">
@@ -61,6 +120,7 @@ const SectionSkill = ({ addClass, sendSkills}) => {
                     </div>
                 </CardSkill>
                 <CardSkill addClass="m-3">
+
                     <h4 className="font-bold text-gray-800 text-lg p-4 pb-2">Design</h4>
                     <div className="flex flex-wrap justify-center p-2 gap-2">
                         <Skill iconeSrc={illustrator} />

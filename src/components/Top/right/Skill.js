@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Skill = ({iconeSrc, iconeName}) => {
+const Skill = ({iconeSrc, iconeName, id}) => {
   return (
-    <div>
-        <img src={iconeSrc} alt={iconeName} width='50px' height='50px' />
+    <div id={id} className="p-1">
+      <img  src={iconeSrc} alt={iconeName} width='50px' height='50px' />
     </div>
   )
 }
