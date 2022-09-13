@@ -1,8 +1,13 @@
 import React from 'react'
+import { useState } from 'react'
 import Accordion from '../../Accordion/Accordion'
 import SectionSkill from './SectionSkill'
 
 const SectionResume = ({ addClass }) => {
+
+    const [selectSkills, setSelectSkills] = useState([])
+    const [accordSta, setAccordSta] = useState(false)
+    const emptyArray = []
 
     // integrate list exp.pro and formation
     // -> create accordion with title and description (skills used)
@@ -19,7 +24,8 @@ const SectionResume = ({ addClass }) => {
             date: "2020 / 2022",
             contentTitle: "INTÉGRATEUR / DEV FRONT-END",
             content: "Développement front-end, production de site-web personnalisé, gestion des environnements et déploiement de plateformes en ligne, soutien et amélioration des projets web.",
-            skill: ['html', 'css', 'js']
+            skill: ['html', 'css', 'js'],
+            open: false
         },
         {
             id:2,
@@ -27,7 +33,8 @@ const SectionResume = ({ addClass }) => {
             date: "2017 / 2020",
             contentTitle: "DEV FRONT-END",
             content: "Développement front-end, gestion des environnements et déploiement de plateformes e-commerce.",
-            skill: ['html', 'css', 'js', 'java']
+            skill: ['html', 'css', 'js', 'java'],
+            open: false
         },
         {
             id:3,
@@ -35,7 +42,8 @@ const SectionResume = ({ addClass }) => {
             date: "2014 / 2017",
             contentTitle: "CHEF DE PROJET - COMM / WEBMASTER",
             content: "Création de support visuel et montage vidéo / Mise en ligne et gestion du site Internet de l'écurie / Participation aux événements sportifs de l'écurie",
-            skill: ['html', 'css']
+            skill: ['html', 'css'],
+            open: false
         }
     ]
     const formation = [
@@ -57,9 +65,17 @@ const SectionResume = ({ addClass }) => {
         }
     ]
 
-    const handleAccorClick = (skill) => {
-        
+    const handleAccorClick = (skill) => {   
         // console.log(skill);
+        if(accordSta){
+            setSelectSkills(skill)
+        } 
+        // console.log(accordSta);
+    }
+
+    const handleOpen = (accordState) => {
+        setAccordSta(!accordState)
+        
     }
 
     return (
@@ -74,7 +90,9 @@ const SectionResume = ({ addClass }) => {
                         contentTitle={item.contentTitle}
                         content={item.content}
                         skill={item.skill}
-                        handleAccorClick={handleAccorClick} />
+                        handleAccorClick={handleAccorClick}
+                        handleOpen={handleOpen}
+                         />
                 ))}
                 <h3 className="font-bold text-gray-800 text-lg pb-2">Formation</h3>
                 {formation.map(item => (
@@ -88,7 +106,7 @@ const SectionResume = ({ addClass }) => {
                         handleAccorClick={handleAccorClick}  />
                 ))}
             </div>
-            <SectionSkill addClass="py-3" />
+            <SectionSkill sendSkills={selectSkills} addClass="py-3" />
         </div>
 
     )

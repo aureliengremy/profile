@@ -2,14 +2,14 @@ import React from 'react'
 import { useState } from 'react';
 import { RiArrowDownSFill, RiArrowUpSFill } from 'react-icons/ri'
 
-const Accordion = ({ title, content, contentTitle, date, skill, handleAccorClick }) => {
+const Accordion = ({ title, content, contentTitle, date, skill, handleAccorClick, handleOpen }) => {
 
     const [contentVisible, setContentVisible] = useState(false)
 
     const toggleContentVisible = () => {
         setContentVisible(!contentVisible)
+        handleOpen(!contentVisible)
     }
-    // console.log(contentVisible)
 
 
     return (

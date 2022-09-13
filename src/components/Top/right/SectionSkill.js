@@ -23,15 +23,16 @@ import tailwind from '../../../assets/comp-icones/tailwind-css.png'
 import vscode from '../../../assets/comp-icones/vscode.png'
 import CardSkill from '../../Card/CardSkill'
 import Skill from './Skill'
+import { useState } from 'react'
 
 
-const SectionSkill = ({ addClass }) => {
+const SectionSkill = ({ addClass, sendSkills}) => {
 
+    console.log(sendSkills);
     return (
         <div className={`section-skill ${addClass}`}>
             <h3 className="font-bold text-gray-800 text-lg pb-2">Compétence</h3>
             <div className="">
-
                 <CardSkill addClass="m-3">
                     <h4 className="font-bold text-gray-800 text-lg p-4 pb-2">Language</h4>
                     <div className="flex flex-wrap justify-center p-2 gap-2">
@@ -73,4 +74,4 @@ const SectionSkill = ({ addClass }) => {
     )
 }
 
-export default SectionSkill
+export default React.memo(SectionSkill)
