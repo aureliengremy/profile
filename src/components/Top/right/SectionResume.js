@@ -64,7 +64,7 @@ const SectionResume = ({ addClass }) => {
         // console.log(skill);
         console.log(accordSta)
         if(accordSta){
-            console.log('je suis dedans')
+            // console.log('je suis dedans')
             setSelectSkills(skill)
         } else {
             setSelectSkills('')
@@ -74,7 +74,6 @@ const SectionResume = ({ addClass }) => {
     
     const handleOpen = (accordState) => {
         setAccordSta(!accordState)
-        
     }
     
 

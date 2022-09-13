@@ -10,15 +10,20 @@ const Accordion = ({ title, content, contentTitle, date, skill, handleAccorClick
         setContentVisible(!contentVisible)
         handleOpen(!contentVisible)
     }
+    // https://stackoverflow.com/questions/69587601/allow-accordion-to-only-open-one-at-a-time
 
     return (
-        <div className="accordion_container mt-5 py-2" onClick={() => handleAccorClick(skill)}>
+        <div className="accordion_container mt-5 py-2">
             <div className="accordion">
 
                 <button
                     type="button"
                     className="accordion_title"
-                    onClick={() => toggleContentVisible()}
+                    onClick={() => {
+                        toggleContentVisible()
+                        handleAccorClick(skill)
+                    }}
+                    
                 >
                     <h2 className="font-bold">{title}</h2>
                     <div className="flex items-center">
@@ -38,14 +43,6 @@ const Accordion = ({ title, content, contentTitle, date, skill, handleAccorClick
             >
                 <div className="accordion_content-inner flex flex-col">
                     <h3 className="pb-2">{contentTitle}</h3>
-                   
-                    {/* {content.length > 1 ? 
-                        content.forEach(text => {
-                            <p>- {text}</p>
-                        })
-                        :
-                        <p>{content}</p>
-                    } */}
                     <p>{content}</p>
 
                 </div>

@@ -71,8 +71,8 @@ const SectionSkill = ({ addClass, sendSkills }) => {
 
 
     useEffect(() => {
-        console.log(sendSkills);
-        if (sendSkills.length > 0) {
+        // console.log(sendSkills);
+        if (sendSkills) {
             sendSkills.forEach(element => {
                 // console.log(element);
                 let divSkill = document.getElementById(element)
