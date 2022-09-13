@@ -24,8 +24,7 @@ const SectionResume = ({ addClass }) => {
             date: "2020 / 2022",
             contentTitle: "INTÉGRATEUR / DEV FRONT-END",
             content: "Développement front-end, production de site-web personnalisé, gestion des environnements et déploiement de plateformes en ligne, soutien et amélioration des projets web.",
-            skill: ['html', 'css', 'js'],
-            open: false
+            skill: ['html', 'css', 'js']
         },
         {
             id:2,
@@ -33,8 +32,7 @@ const SectionResume = ({ addClass }) => {
             date: "2017 / 2020",
             contentTitle: "DEV FRONT-END",
             content: "Développement front-end, gestion des environnements et déploiement de plateformes e-commerce.",
-            skill: ['html', 'css', 'js', 'java'],
-            open: false
+            skill: ['html', 'css', 'js', 'java']
         },
         {
             id:3,
@@ -42,8 +40,7 @@ const SectionResume = ({ addClass }) => {
             date: "2014 / 2017",
             contentTitle: "CHEF DE PROJET - COMM / WEBMASTER",
             content: "Création de support visuel et montage vidéo / Mise en ligne et gestion du site Internet de l'écurie / Participation aux événements sportifs de l'écurie",
-            skill: ['html', 'css'],
-            open: false
+            skill: ['html', 'css']
         }
     ]
     const formation = [
