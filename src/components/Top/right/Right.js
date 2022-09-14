@@ -25,9 +25,9 @@ const Right = ({ getScroll }) => {
 
     return (
         <div className="right lg:h-full lg:w-2/3 overflow-y-auto" onScroll={handleScroll}>
-            <div className="max-w-md sm:max-w-xl md:max-w-2xl mx-auto py-5" >
+            <div className="max-w-md sm:max-w-xl md:max-w-2xl xl:max-w-3xl mx-auto py-5" >
                 <SectionDescription addClass="py-3" />
-                <SectionResume addClass="py-3 space-y-5"/>  
+                <SectionResume addClass="py-3"/>  
             </div>
         </div>
     )

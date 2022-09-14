@@ -82,7 +82,7 @@ const SectionResume = ({ addClass }) => {
 
     return (
         <div className="md:flex lg:block xl:flex">
-            <div className="py-3 space-y-5">
+            <div className="py-3">
                 <h3 className="font-bold text-gray-800 text-lg pb-2">Expérience professionnels</h3>
                 {expProf.map(item => (
                     <Accordion

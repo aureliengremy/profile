@@ -12,7 +12,7 @@ const Accordion = ({ title, content, contentTitle, date, skill, handleAccorClick
     // https://stackoverflow.com/questions/69587601/allow-accordion-to-only-open-one-at-a-time
 
     return (
-        <div className="accordion_container mt-5 py-2">
+        <div className="accordion_container mb-5 py-2">
             <div className="accordion">
 
                 <button
