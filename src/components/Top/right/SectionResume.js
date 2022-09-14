@@ -18,7 +18,7 @@ const SectionResume = ({ addClass }) => {
 
     const expProf = [
         {
-            id:1,
+            id: 1,
             title: 'Solution Medias 360 - Montréal, CA',
             date: "2020 / 2022",
             contentTitle: "INTÉGRATEUR / DEV FRONT-END",
@@ -26,7 +26,7 @@ const SectionResume = ({ addClass }) => {
             skill: ['html', 'sass', 'javascript']
         },
         {
-            id:2,
+            id: 2,
             title: 'ALIZNET - Paris, FR puis Montréal, CA',
             date: "2017 / 2020",
             contentTitle: "DEV FRONT-END",
@@ -34,7 +34,7 @@ const SectionResume = ({ addClass }) => {
             skill: ['html', 'sass', 'javascript', 'java']
         },
         {
-            id:3,
+            id: 3,
             title: 'DEFI-PERFORMANCE - FR',
             date: "2014 / 2017",
             contentTitle: "CHEF DE PROJET - COMM / WEBMASTER",
@@ -44,7 +44,7 @@ const SectionResume = ({ addClass }) => {
     ]
     const formation = [
         {
-            id:1,
+            id: 1,
             title: 'LEWAGON',
             date: "2022",
             contentTitle: "Coding Bootcamp",
@@ -52,7 +52,7 @@ const SectionResume = ({ addClass }) => {
             skill: ['Figma', 'git']
         },
         {
-            id:2,
+            id: 2,
             title: 'ISC Paris',
             date: "2013 / 2016",
             contentTitle: "Master 2 (M2)",
@@ -60,25 +60,28 @@ const SectionResume = ({ addClass }) => {
             skill: ['ai', 'ps']
         }
     ]
-    const handleAccorClick = (skill) => {   
-        // console.log(skill);
-        console.log(accordSta)
-        if(accordSta){
-            // console.log('je suis dedans')
+    const handleAccorClick = (skill) => {
+        console.log(skill);
+        console.log(selectSkills);
+        const equals = (a, b) => JSON.stringify(a) === JSON.stringify(b);
+        console.log(equals(skill,selectSkills));
+        if (equals(skill,selectSkills)) {
+            setSelectSkills('')
+        } else if (!equals(skill,selectSkills)) {
+            console.log('je suis dedans')
             setSelectSkills(skill)
         } else {
             setSelectSkills('')
         }
-        // console.log(accordSta);
     }
-    
-    const handleOpen = (accordState) => {
-        setAccordSta(!accordState)
-    }
-    
+
+    // const handleOpen = (accordState) => {
+    //     setAccordSta(!accordState)
+    // }
+
 
     return (
-        <div className="">
+        <div className="md:flex lg:block xl:flex">
             <div className="py-3 space-y-5">
                 <h3 className="font-bold text-gray-800 text-lg pb-2">Expérience professionnels</h3>
                 {expProf.map(item => (
@@ -90,8 +93,7 @@ const SectionResume = ({ addClass }) => {
                         content={item.content}
                         skill={item.skill}
                         handleAccorClick={handleAccorClick}
-                        handleOpen={handleOpen}
-                         />
+                    />
                 ))}
                 <h3 className="font-bold text-gray-800 text-lg pb-2">Formation</h3>
                 {formation.map(item => (
@@ -102,7 +104,7 @@ const SectionResume = ({ addClass }) => {
                         contentTitle={item.contentTitle}
                         content={item.content}
                         skill={item.skill}
-                        handleAccorClick={handleAccorClick}  />
+                        handleAccorClick={handleAccorClick} />
                 ))}
             </div>
             <SectionSkill sendSkills={selectSkills} addClass="py-3" />

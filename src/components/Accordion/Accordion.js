@@ -2,13 +2,12 @@ import React from 'react'
 import { useState } from 'react';
 import { RiArrowDownSFill, RiArrowUpSFill } from 'react-icons/ri'
 
-const Accordion = ({ title, content, contentTitle, date, skill, handleAccorClick, handleOpen }) => {
+const Accordion = ({ title, content, contentTitle, date, skill, handleAccorClick }) => {
 
     const [contentVisible, setContentVisible] = useState(false)
 
     const toggleContentVisible = () => {
         setContentVisible(!contentVisible)
-        handleOpen(!contentVisible)
     }
     // https://stackoverflow.com/questions/69587601/allow-accordion-to-only-open-one-at-a-time
 
