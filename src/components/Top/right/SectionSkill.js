@@ -32,42 +32,15 @@ const SectionSkill = ({ addClass, sendSkills }) => {
     const [borderSkills, setBorderSkills] = useState('')
 
     const langage = [
-        {
-            icone: html,
-            name: 'html'
-        },
-        {
-            icone: sass,
-            name: 'sass'
-        },
-        {
-            icone: ruby,
-            name: 'ruby'
-        },
-        {
-            icone: javascript,
-            name: 'javascript'
-        },
-        {
-            icone: react,
-            name: 'react'
-        },
-        {
-            icone: git,
-            name: 'git'
-        },
-        {
-            icone: java,
-            name: 'java'
-        },
-        {
-            icone: sql,
-            name: 'sql'
-        },
-        {
-            icone: tailwind,
-            name: 'tailwind'
-        }
+        { icone: html, name: 'html' },
+        { icone: sass, name: 'sass' },
+        { icone: ruby, name: 'ruby' },
+        { icone: javascript, name: 'javascript'},
+        { icone: react, name: 'react' },
+        { icone: git, name: 'git' },
+        { icone: java, name: 'java' },
+        { icone: sql, name: 'sql' },
+        { icone: tailwind, name: 'tailwind' }
     ]
 
     const addBorder = (skills) => {
@@ -90,65 +63,65 @@ const SectionSkill = ({ addClass, sendSkills }) => {
 
 
 
-const equals = (a, b) => JSON.stringify(a) === JSON.stringify(b);
+    const equals = (a, b) => JSON.stringify(a) === JSON.stringify(b);
 
-useEffect(() => {
-    console.log(sendSkills, borderSkills);
-    console.log(equals(sendSkills, borderSkills));
-    if (sendSkills) {
-        if (borderSkills === '') {
-            addBorder(sendSkills)
-        } else if (equals(sendSkills, borderSkills)) {
-            removeBorder()
-        } else {
-            removeBorder()
-            addBorder(sendSkills)
+    useEffect(() => {
+        console.log(sendSkills, borderSkills);
+        console.log(equals(sendSkills, borderSkills));
+        if (sendSkills) {
+            if (borderSkills === '') {
+                addBorder(sendSkills)
+            } else if (equals(sendSkills, borderSkills)) {
+                removeBorder()
+            } else {
+                removeBorder()
+                addBorder(sendSkills)
+            }
         }
-    }
-}, [sendSkills])
+    }, [sendSkills])
 
 
 
 
 
-return (
-    <div className={`section-skill ${addClass}`}>
-        <h3 className="font-bold text-gray-800 text-lg pb-2">Compétence</h3>
-        <div className="">
-            <CardSkill addClass="m-3">
-                <h4 className="font-bold text-gray-800 text-lg p-4 pb-2">Language</h4>
-                <div className="flex flex-wrap justify-center p-2 gap-2">
-                    {langage.map((item, index) => (
-                        <Skill key={index} iconeSrc={item.icone} id={item.name} />
-                    ))}
-                </div>
-            </CardSkill>
-            <CardSkill addClass="m-3">
-                <h4 className="font-bold text-gray-800 text-md p-4 pb-2">Tools</h4>
-                <div className="flex flex-wrap justify-center p-2 gap-2">
-                    <Skill iconeSrc={linux} />
-                    <Skill iconeSrc={notion} />
-                    <Skill iconeSrc={raspberry} />
-                    <Skill iconeSrc={github} />
-                    <Skill iconeSrc={gitlab} />
-                    <Skill iconeSrc={heroku} />
-                    <Skill iconeSrc={intellij} />
-                    <Skill iconeSrc={vscode} />
-                </div>
-            </CardSkill>
-            <CardSkill addClass="m-3">
+    return (
+        <div className={`section-skill ${addClass}`}>
+            <h3 className="font-bold text-gray-800 text-lg pb-2">Compétence</h3>
+            <div className="">
+                <CardSkill addClass="m-3">
+                    <h4 className="font-bold text-gray-800 text-lg p-4 pb-2">Language</h4>
+                    <div className="flex flex-wrap justify-center p-2 gap-2">
+                        {langage.map((item, index) => (
+                            <Skill key={index} iconeSrc={item.icone} id={item.name} />
+                        ))}
+                    </div>
+                </CardSkill>
+                <CardSkill addClass="m-3">
+                    <h4 className="font-bold text-gray-800 text-md p-4 pb-2">Tools</h4>
+                    <div className="flex flex-wrap justify-center p-2 gap-2">
+                        <Skill iconeSrc={linux} />
+                        <Skill iconeSrc={notion} />
+                        <Skill iconeSrc={raspberry} />
+                        <Skill iconeSrc={github} />
+                        <Skill iconeSrc={gitlab} />
+                        <Skill iconeSrc={heroku} />
+                        <Skill iconeSrc={intellij} />
+                        <Skill iconeSrc={vscode} />
+                    </div>
+                </CardSkill>
+                <CardSkill addClass="m-3">
 
-                <h4 className="font-bold text-gray-800 text-lg p-4 pb-2">Design</h4>
-                <div className="flex flex-wrap justify-center p-2 gap-2">
-                    <Skill iconeSrc={illustrator} />
-                    <Skill iconeSrc={photoshop} />
-                    <Skill iconeSrc={xd} />
-                    <Skill iconeSrc={figma} />
-                </div>
-            </CardSkill>
+                    <h4 className="font-bold text-gray-800 text-lg p-4 pb-2">Design</h4>
+                    <div className="flex flex-wrap justify-center p-2 gap-2">
+                        <Skill iconeSrc={illustrator} />
+                        <Skill iconeSrc={photoshop} />
+                        <Skill iconeSrc={xd} />
+                        <Skill iconeSrc={figma} />
+                    </div>
+                </CardSkill>
+            </div>
         </div>
-    </div>
-)
+    )
 }
 
 export default React.memo(SectionSkill)

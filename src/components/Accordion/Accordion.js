@@ -1,5 +1,4 @@
 import React from 'react'
-import { useState } from 'react';
 import { RiArrowDownSFill, RiArrowUpSFill } from 'react-icons/ri'
 
 const Accordion = ({ title, content, contentTitle, date, skill, handleToggle, open }) => {
