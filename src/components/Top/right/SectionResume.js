@@ -1,20 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useState } from 'react'
 import Accordion from '../../Accordion/Accordion'
 import SectionSkill from './SectionSkill'
 
 const SectionResume = ({ addClass }) => {
 
-    const [selectSkills, setSelectSkills] = useState([])
-    const [accordSta, setAccordSta] = useState(true)
-
-    // integrate list exp.pro and formation
-    // -> create accordion with title and description (skills used)
-    // -> 
-    // Pick up datas from Skill with function from SectionResume
-    // -> when accordion clicked call function handleClick
-    // -> handleClick get the list of skills
-    // -> send the list to SectionSkill to highlight icone
+    const [openKey, setOpenKey] = useState()
+    const [showSkills, setShowSkills] = useState([])
 
     const expProf = [
         {
@@ -31,7 +23,7 @@ const SectionResume = ({ addClass }) => {
             date: "2017 / 2020",
             contentTitle: "DEV FRONT-END",
             content: "Développement front-end, gestion des environnements et déploiement de plateformes e-commerce.",
-            skill: ['html', 'sass', 'javascript', 'java']
+            skill: ['react', 'git', 'sql']
         },
         {
             id: 3,
@@ -49,7 +41,7 @@ const SectionResume = ({ addClass }) => {
             date: "2022",
             contentTitle: "Coding Bootcamp",
             content: "Formation WebDev - FullStack de 9 semaines à temps plein intense pour apprendre le HTML, CSS, Bootstrap, JavaScript ES6,SQL, git, GitHub, Heroku and Ruby on Rails.",
-            skill: ['Figma', 'git']
+            skill: ['html', 'git']
         },
         {
             id: 2,
@@ -57,28 +49,14 @@ const SectionResume = ({ addClass }) => {
             date: "2013 / 2016",
             contentTitle: "Master 2 (M2)",
             content: "E-Business & Communication Multimédia / Responsable Communication dans l'association COSMOPOL",
-            skill: ['ai', 'ps']
+            skill: ['illustrator', 'photoshop']
         }
     ]
-    const handleAccorClick = (skill) => {
-        console.log(skill);
-        console.log(selectSkills);
-        const equals = (a, b) => JSON.stringify(a) === JSON.stringify(b);
-        console.log(equals(skill,selectSkills));
-        if (equals(skill,selectSkills)) {
-            setSelectSkills('')
-        } else if (!equals(skill,selectSkills)) {
-            console.log('je suis dedans')
-            setSelectSkills(skill)
-        } else {
-            setSelectSkills('')
-        }
+
+    const handleToggle = (key, skill) => {
+        setOpenKey(openKey !== key ? key : null)
+        setShowSkills(skill)
     }
-
-    // const handleOpen = (accordState) => {
-    //     setAccordSta(!accordState)
-    // }
-
 
     return (
         <div className="md:flex lg:block xl:flex">
@@ -92,7 +70,8 @@ const SectionResume = ({ addClass }) => {
                         contentTitle={item.contentTitle}
                         content={item.content}
                         skill={item.skill}
-                        handleAccorClick={handleAccorClick}
+                        handleToggle={handleToggle}
+                        open={openKey === item.title}
                     />
                 ))}
                 <h3 className="font-bold text-gray-800 text-lg pb-2">Formation</h3>
@@ -104,10 +83,12 @@ const SectionResume = ({ addClass }) => {
                         contentTitle={item.contentTitle}
                         content={item.content}
                         skill={item.skill}
-                        handleAccorClick={handleAccorClick} />
+                        handleToggle={handleToggle}
+                        open={openKey === item.title}
+                    />
                 ))}
             </div>
-            <SectionSkill sendSkills={selectSkills} addClass="py-3" />
+            <SectionSkill sendSkills={showSkills} addClass="py-3" />
         </div>
 
     )

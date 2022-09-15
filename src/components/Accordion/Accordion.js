@@ -2,13 +2,13 @@ import React from 'react'
 import { useState } from 'react';
 import { RiArrowDownSFill, RiArrowUpSFill } from 'react-icons/ri'
 
-const Accordion = ({ title, content, contentTitle, date, skill, handleAccorClick }) => {
+const Accordion = ({ title, content, contentTitle, date, skill, handleToggle, open }) => {
 
-    const [contentVisible, setContentVisible] = useState(false)
+    // const [contentVisible, setContentVisible] = useState(false)
 
-    const toggleContentVisible = () => {
-        setContentVisible(!contentVisible)
-    }
+    // const toggleContentVisible = () => {
+    //     setContentVisible(!contentVisible)
+    // }
     // https://stackoverflow.com/questions/69587601/allow-accordion-to-only-open-one-at-a-time
 
     return (
@@ -19,15 +19,15 @@ const Accordion = ({ title, content, contentTitle, date, skill, handleAccorClick
                     type="button"
                     className="accordion_title"
                     onClick={() => {
-                        toggleContentVisible()
-                        handleAccorClick(skill)
+                        handleToggle(title,skill)
+                        // handleAccorClick(skill)
                     }}
                     
                 >
                     <h2 className="font-bold">{title}</h2>
                     <div className="flex items-center">
                         <span className="">{date}</span>
-                        <i className="p-2">{contentVisible
+                        <i className="p-2">{open
                             ? <RiArrowDownSFill size="24px" />
                             : <RiArrowUpSFill size="24px" />}
                         </i>
@@ -37,7 +37,7 @@ const Accordion = ({ title, content, contentTitle, date, skill, handleAccorClick
             </div>
 
             <div
-                className={`accordion_content ${contentVisible ? "show_content" : ""
+                className={`accordion_content ${open ? "show_content" : ""
                     }`}
             >
                 <div className="accordion_content-inner flex flex-col">

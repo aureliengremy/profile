@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import illustrator from '../../../assets/comp-icones/adobe-illustrator.png'
 import photoshop from '../../../assets/comp-icones/adobe-photoshop.png'
 import xd from '../../../assets/comp-icones/adobe-xd.png'
@@ -28,7 +28,8 @@ import { useEffect } from 'react'
 
 const SectionSkill = ({ addClass, sendSkills }) => {
 
-    // console.log(sendSkills);
+    console.log(sendSkills);
+    const [borderSkills, setBorderSkills] = useState('')
 
     const langage = [
         {
@@ -69,69 +70,85 @@ const SectionSkill = ({ addClass, sendSkills }) => {
         }
     ]
 
+    const addBorder = (skills) => {
+        sendSkills.forEach(element => {
+            // console.log(element);
+            let divSkill = document.getElementById(element)
+            divSkill.classList.remove('p-1')
+            divSkill.classList.add('border-skill')
+            setBorderSkills(skills);
+        })
+    }
+    const removeBorder = () => {
+        let divWithClass = document.getElementsByClassName('border-skill')
+        Array.from(divWithClass).forEach((el) => {
+            el.classList.remove('border-skill')
+            el.classList.add('p-1')
+            setBorderSkills('');
+        });
+    }
 
-    useEffect(() => {
-        // console.log(sendSkills);
-        if (sendSkills) {
-            sendSkills.forEach(element => {
-                // console.log(element);
-                let divSkill = document.getElementById(element)
-                divSkill.classList.remove('p-1')
-                divSkill.classList.add('border-skill')
-            })
+
+
+const equals = (a, b) => JSON.stringify(a) === JSON.stringify(b);
+
+useEffect(() => {
+    console.log(sendSkills, borderSkills);
+    console.log(equals(sendSkills, borderSkills));
+    if (sendSkills) {
+        if (borderSkills === '') {
+            addBorder(sendSkills)
+        } else if (equals(sendSkills, borderSkills)) {
+            removeBorder()
         } else {
-            let divWithClass = document.getElementsByClassName('border-skill')
-            Array.from(divWithClass).forEach((el) => {
-                el.classList.remove('border-skill')
-                el.classList.add('p-1')
-            });
-            
-            console.log('off');
+            removeBorder()
+            addBorder(sendSkills)
         }
-    }, [sendSkills])
+    }
+}, [sendSkills])
 
 
 
 
 
-    return (
-        <div className={`section-skill ${addClass}`}>
-            <h3 className="font-bold text-gray-800 text-lg pb-2">Compétence</h3>
-            <div className="">
-                <CardSkill addClass="m-3">
-                    <h4 className="font-bold text-gray-800 text-lg p-4 pb-2">Language</h4>
-                    <div className="flex flex-wrap justify-center p-2 gap-2">
-                        {langage.map((item, index) => (
-                            <Skill key={index} iconeSrc={item.icone} id={item.name} />
-                        ))}
-                    </div>
-                </CardSkill>
-                <CardSkill addClass="m-3">
-                    <h4 className="font-bold text-gray-800 text-md p-4 pb-2">Tools</h4>
-                    <div className="flex flex-wrap justify-center p-2 gap-2">
-                        <Skill iconeSrc={linux} />
-                        <Skill iconeSrc={notion} />
-                        <Skill iconeSrc={raspberry} />
-                        <Skill iconeSrc={github} />
-                        <Skill iconeSrc={gitlab} />
-                        <Skill iconeSrc={heroku} />
-                        <Skill iconeSrc={intellij} />
-                        <Skill iconeSrc={vscode} />
-                    </div>
-                </CardSkill>
-                <CardSkill addClass="m-3">
+return (
+    <div className={`section-skill ${addClass}`}>
+        <h3 className="font-bold text-gray-800 text-lg pb-2">Compétence</h3>
+        <div className="">
+            <CardSkill addClass="m-3">
+                <h4 className="font-bold text-gray-800 text-lg p-4 pb-2">Language</h4>
+                <div className="flex flex-wrap justify-center p-2 gap-2">
+                    {langage.map((item, index) => (
+                        <Skill key={index} iconeSrc={item.icone} id={item.name} />
+                    ))}
+                </div>
+            </CardSkill>
+            <CardSkill addClass="m-3">
+                <h4 className="font-bold text-gray-800 text-md p-4 pb-2">Tools</h4>
+                <div className="flex flex-wrap justify-center p-2 gap-2">
+                    <Skill iconeSrc={linux} />
+                    <Skill iconeSrc={notion} />
+                    <Skill iconeSrc={raspberry} />
+                    <Skill iconeSrc={github} />
+                    <Skill iconeSrc={gitlab} />
+                    <Skill iconeSrc={heroku} />
+                    <Skill iconeSrc={intellij} />
+                    <Skill iconeSrc={vscode} />
+                </div>
+            </CardSkill>
+            <CardSkill addClass="m-3">
 
-                    <h4 className="font-bold text-gray-800 text-lg p-4 pb-2">Design</h4>
-                    <div className="flex flex-wrap justify-center p-2 gap-2">
-                        <Skill iconeSrc={illustrator} />
-                        <Skill iconeSrc={photoshop} />
-                        <Skill iconeSrc={xd} />
-                        <Skill iconeSrc={figma} />
-                    </div>
-                </CardSkill>
-            </div>
+                <h4 className="font-bold text-gray-800 text-lg p-4 pb-2">Design</h4>
+                <div className="flex flex-wrap justify-center p-2 gap-2">
+                    <Skill iconeSrc={illustrator} />
+                    <Skill iconeSrc={photoshop} />
+                    <Skill iconeSrc={xd} />
+                    <Skill iconeSrc={figma} />
+                </div>
+            </CardSkill>
         </div>
-    )
+    </div>
+)
 }
 
 export default React.memo(SectionSkill)
