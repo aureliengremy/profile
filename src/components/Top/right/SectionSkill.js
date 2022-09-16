@@ -97,7 +97,7 @@ const SectionSkill = ({ addClass, sendSkills }) => {
 
     return (
         <div className={`section-skill ${addClass}`}>
-            <h3 className="font-bold text-gray-800 text-lg pb-2">Compétence</h3>
+            <h3 className="font-bold text-gray-800 text-lg pb-2 xl:text-center">Compétence</h3>
             <div className="">
                 <CardSkill addClass="m-3">
                     <h4 className="font-bold text-gray-800 text-lg p-4 pb-2">Language</h4>
