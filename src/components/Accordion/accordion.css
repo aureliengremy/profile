@@ -48,5 +48,9 @@
   padding: 10px;
   display: flex;
   justify-content: left;
+  transition: opacity 0.3s;
+  opacity: 0;
 }
-
+.accordion_content.show_content .accordion_content-inner {
+  opacity: 1;
+}
