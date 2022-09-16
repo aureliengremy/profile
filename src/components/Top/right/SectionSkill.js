@@ -63,7 +63,6 @@ const SectionSkill = ({ addClass, sendSkills }) => {
         sendSkills.forEach(element => {
             // console.log(element);
             let divSkill = document.getElementById(element)
-            divSkill.classList.remove('p-1')
             divSkill.classList.add('border-skill')
             setBorderSkills(skills);
         })
@@ -72,7 +71,6 @@ const SectionSkill = ({ addClass, sendSkills }) => {
         let divWithClass = document.getElementsByClassName('border-skill')
         Array.from(divWithClass).forEach((el) => {
             el.classList.remove('border-skill')
-            el.classList.add('p-1')
             setBorderSkills('');
         });
     }
@@ -95,9 +93,6 @@ const SectionSkill = ({ addClass, sendSkills }) => {
             }
         }
     }, [sendSkills])
-
-
-
 
 
     return (
@@ -125,7 +120,7 @@ const SectionSkill = ({ addClass, sendSkills }) => {
                     <h4 className="font-bold text-gray-800 text-lg p-4 pb-2">Design</h4>
                     <div className="flex flex-wrap justify-center p-2 gap-2">
                         {designs.map((item,index) => (
-                            <Skill key={index} iconeSrc={item.icone} id={item.id} />
+                            <Skill key={index} iconeSrc={item.icone} id={item.name} />
                         ))}
                     </div>
                 </CardSkill>
