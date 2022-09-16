@@ -28,10 +28,9 @@ import { useEffect } from 'react'
 
 const SectionSkill = ({ addClass, sendSkills }) => {
 
-    console.log(sendSkills);
     const [borderSkills, setBorderSkills] = useState('')
 
-    const langage = [
+    const langages = [
         { icone: html, name: 'html' },
         { icone: sass, name: 'sass' },
         { icone: ruby, name: 'ruby' },
@@ -42,6 +41,23 @@ const SectionSkill = ({ addClass, sendSkills }) => {
         { icone: sql, name: 'sql' },
         { icone: tailwind, name: 'tailwind' }
     ]
+    const tools = [
+        { icone: linux, name: 'linux' },
+        { icone: notion, name: 'notion' },
+        { icone: raspberry, name: 'raspberry' },
+        { icone: github, name: 'github'},
+        { icone: gitlab, name: 'gitlab' },
+        { icone: heroku, name: 'heroku' },
+        { icone: intellij, name: 'intellij' },
+        { icone: vscode, name: 'vscode' }
+    ]
+    const designs = [
+        { icone: illustrator, name: 'illustrator' },
+        { icone: photoshop, name: 'photoshop' },
+        { icone: xd, name: 'xd' },
+        { icone: figma, name: 'figma'}  
+    ]
+    
 
     const addBorder = (skills) => {
         sendSkills.forEach(element => {
@@ -91,7 +107,7 @@ const SectionSkill = ({ addClass, sendSkills }) => {
                 <CardSkill addClass="m-3">
                     <h4 className="font-bold text-gray-800 text-lg p-4 pb-2">Language</h4>
                     <div className="flex flex-wrap justify-center p-2 gap-2">
-                        {langage.map((item, index) => (
+                        {langages.map((item, index) => (
                             <Skill key={index} iconeSrc={item.icone} id={item.name} />
                         ))}
                     </div>
@@ -99,24 +115,18 @@ const SectionSkill = ({ addClass, sendSkills }) => {
                 <CardSkill addClass="m-3">
                     <h4 className="font-bold text-gray-800 text-md p-4 pb-2">Tools</h4>
                     <div className="flex flex-wrap justify-center p-2 gap-2">
-                        <Skill iconeSrc={linux} />
-                        <Skill iconeSrc={notion} />
-                        <Skill iconeSrc={raspberry} />
-                        <Skill iconeSrc={github} />
-                        <Skill iconeSrc={gitlab} />
-                        <Skill iconeSrc={heroku} />
-                        <Skill iconeSrc={intellij} />
-                        <Skill iconeSrc={vscode} />
+                        {tools.map((item, index) => (
+                            <Skill key={index} iconeSrc={item.icone} id={item.name} />
+                        ))}
                     </div>
                 </CardSkill>
                 <CardSkill addClass="m-3">
 
                     <h4 className="font-bold text-gray-800 text-lg p-4 pb-2">Design</h4>
                     <div className="flex flex-wrap justify-center p-2 gap-2">
-                        <Skill iconeSrc={illustrator} />
-                        <Skill iconeSrc={photoshop} />
-                        <Skill iconeSrc={xd} />
-                        <Skill iconeSrc={figma} />
+                        {designs.map((item,index) => (
+                            <Skill key={index} iconeSrc={item.icone} id={item.id} />
+                        ))}
                     </div>
                 </CardSkill>
             </div>

@@ -1,13 +1,25 @@
-@import url(../../components/old/old_version.scss);
-@import url(../../components/Accordion/accordion.scss);
+@import url(../../components/old/old_version.css);
+@import url(../../components/Accordion/accordion.css);
+
 .left {
   background-image: url(https://images.unsplash.com/photo-1563008887-170b34916b21?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2787&q=80);
   backdrop-filter: blur(2px);
-  position: relative; }
+  position: relative;
+}
 
 .profile-title {
-  text-shadow: 1px 1px #e2e8f0; }
+  text-shadow: 1px 1px #e2e8f0;
+}
 
 .border-skill {
   border: 4px solid orange;
-  border-radius: 5px; }
+  border-radius: 5px;
+}
+
+.old_version {
+  position: absolute;
+  bottom: 0;
+  background-color: initial;
+  border: initial;
+  text-decoration: none;
+}

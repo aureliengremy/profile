@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../old_version_style.css';
+import './old_version.css';
 import old_me from '../../assets/images/old-me-in-the-dark.jpeg'
 import { useNavigate } from 'react-router-dom'
 

@@ -23,8 +23,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build-css": "node-sass --include-path scss src/style/scss/main.scss -o src/style/css",
-    "watch-css": "nodemon -e scss -x \"npm run build-css\"",
     "tailwind-css": "npx tailwindcss-cli build src/index.css -o src/style/css/tailwind.css"
   },
   "eslintConfig": {

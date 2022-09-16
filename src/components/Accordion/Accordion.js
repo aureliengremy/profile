@@ -3,15 +3,8 @@ import { RiArrowDownSFill, RiArrowUpSFill } from 'react-icons/ri'
 
 const Accordion = ({ title, content, contentTitle, date, skill, handleToggle, open }) => {
 
-    // const [contentVisible, setContentVisible] = useState(false)
-
-    // const toggleContentVisible = () => {
-    //     setContentVisible(!contentVisible)
-    // }
-    // https://stackoverflow.com/questions/69587601/allow-accordion-to-only-open-one-at-a-time
-
     return (
-        <div className="accordion_container mb-5 py-2">
+        <div className={`accordion_container mb-5 py-2 ${open ? 'open': ''}`}>
             <div className="accordion">
 
                 <button
@@ -19,7 +12,6 @@ const Accordion = ({ title, content, contentTitle, date, skill, handleToggle, op
                     className="accordion_title"
                     onClick={() => {
                         handleToggle(title,skill)
-                        // handleAccorClick(skill)
                     }}
                     
                 >
