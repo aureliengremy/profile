@@ -6,8 +6,31 @@ import Marvel from '../../assets/images/website-screen/Marvel_Quiz_App.png';
 import NightSkyper from '../../assets/images/website-screen/NightSkyper.png';
 import RentALife from '../../assets/images/website-screen/RentALife.png';
 import Toyota from '../../assets/images/website-screen/Toyota_Lachute.png';
+import { useRef } from 'react';
+import { useEffect } from 'react';
 
 const Project = () => {
+
+    const section = useRef()
+
+
+    
+    useEffect(() => {
+        // get the height of the div element
+        const offSet = section.current.offsetTop
+        console.log(offSet);
+        console.log(
+            "The height of the div is: ", section.current.offsetHeight
+            );
+            window.addEventListener('scroll', () => {
+                // console.log(window.scrollY)
+                if(window.scrollY === offSet) {
+                    console.log('bottom')
+                }
+                
+            }) 
+        }, []);
+
 
     const ProjectsData = [
         {
@@ -62,11 +85,13 @@ const Project = () => {
         // el.getBoundingClientRect().top
     }
     return (
-        <div className="section-project mx-auto py-8">
+        <div ref={section} className="section-project mx-auto py-8">
             <h3 className="text-xl text-gray-900">Project</h3>
             <div className="mt-6 grid gap-10 lg:grid-cols-2 xl:grid-cols-3 xl:gap-6">
                 {ProjectsData.map((project,index) => (
-                    <Card   title={project.name}   
+                    <Card 
+                            key={index}
+                            title={project.name}   
                             text={project.text}
                             image={project.img} 
                             link={project.link} />
