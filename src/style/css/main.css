@@ -11,12 +11,6 @@
   text-shadow: 1px 1px #e2e8f0;
 }
 
-.border-skill {
-  transition: border 300ms;
-  border: 2px solid orange;
-  border-radius: 5px;
-}
-
 .old_version {
   position: absolute;
   bottom: 0;

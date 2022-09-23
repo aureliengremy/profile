@@ -26,7 +26,7 @@ import Skill from './Skill'
 import { useEffect } from 'react'
 
 
-const SectionSkill = ({ addClass, sendSkills }) => {
+const SectionSkill = ({ addClass, sendSkills, highlight }) => {
 
     const [borderSkills, setBorderSkills] = useState('')
 
@@ -57,31 +57,30 @@ const SectionSkill = ({ addClass, sendSkills }) => {
         { icone: xd, name: 'xd' },
         { icone: figma, name: 'figma'}  
     ]
-    
 
     const addBorder = (skills) => {
         sendSkills.forEach(element => {
             // console.log(element);
             let divSkill = document.getElementById(element)
-            divSkill.classList.add('border-skill')
+            divSkill.classList.remove('border-white')
+            divSkill.classList.add('border-red-400')
             setBorderSkills(skills);
         })
     }
     const removeBorder = () => {
-        let divWithClass = document.getElementsByClassName('border-skill')
+        let divWithClass = document.getElementsByClassName('border-red-400')
         Array.from(divWithClass).forEach((el) => {
-            el.classList.remove('border-skill')
+            el.classList.add('border-white')
+            el.classList.remove('border-red-400')
             setBorderSkills('');
         });
     }
 
-
+    console.log(highlight)
 
     const equals = (a, b) => JSON.stringify(a) === JSON.stringify(b);
 
     useEffect(() => {
-        console.log(sendSkills, borderSkills);
-        console.log(equals(sendSkills, borderSkills));
         if (sendSkills) {
             if (borderSkills === '') {
                 addBorder(sendSkills)
@@ -99,7 +98,7 @@ const SectionSkill = ({ addClass, sendSkills }) => {
         <div className={`section-skill ${addClass}`}>
             <h3 className="font-bold text-gray-800 text-lg pb-2 xl:text-center">Compétence</h3>
             <div className="">
-                <CardSkill addClass="m-3">
+                <CardSkill cardClass="m-3">
                     <h4 className="font-bold text-gray-800 text-lg p-4 pb-2">Language</h4>
                     <div className="flex flex-wrap justify-center p-2 gap-2">
                         {langages.map((item, index) => (
@@ -107,7 +106,7 @@ const SectionSkill = ({ addClass, sendSkills }) => {
                         ))}
                     </div>
                 </CardSkill>
-                <CardSkill addClass="m-3">
+                <CardSkill cardClass="m-3">
                     <h4 className="font-bold text-gray-800 text-md p-4 pb-2">Tools</h4>
                     <div className="flex flex-wrap justify-center p-2 gap-2">
                         {tools.map((item, index) => (
@@ -115,7 +114,7 @@ const SectionSkill = ({ addClass, sendSkills }) => {
                         ))}
                     </div>
                 </CardSkill>
-                <CardSkill addClass="m-3">
+                <CardSkill cardClass="m-3">
 
                     <h4 className="font-bold text-gray-800 text-lg p-4 pb-2">Design</h4>
                     <div className="flex flex-wrap justify-center p-2 gap-2">
